@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Student {
+    String name;
+    String usn;
+    String department;
+    String section;
+    double cgpa;
+
+    public Student(String name, String usn, String department, String section, double cgpa) {
+        this.name = name;
+        this.usn = usn;
+        this.department = department;
+        this.section = section;
+        this.cgpa = cgpa;
+    }
+}
+
+public class StudentManagement {
+    public static void main(String[] args) {
+        // Creating an ArrayList to store Student objects
+        ArrayList<Student> studentList = new ArrayList<>();
+
+        // Adding some sample students to the list with Indian names
+        studentList.add(new Student("Rahul", "USN001", "ISE", "A", 9.0));
+        studentList.add(new Student("Aisha", "USN002", "CSE", "B", 8.7));
+        studentList.add(new Student("Vikram", "USN003", "ISE", "C", 8.9));
+        studentList.add(new Student("Priya", "USN004", "CSE", "A", 8.2));
+
+        // Search for students with CGPA > 8.5
+        System.out.println("Students with CGPA > 8.5:");
+        Iterator<Student> iterator = studentList.iterator();
+        while (iterator.hasNext()) {
+            Student student = iterator.next();
+            if (student.cgpa > 8.5) {
+                System.out.println(student.name + " - " + student.cgpa);
+            }
+        }
+
+        // Print students belonging to 'ISE' department
+        System.out.println("\nStudents belonging to 'ISE' department:");
+        iterator = studentList.iterator();
+        while (iterator.hasNext()) {
+            Student student = iterator.next();
+            if ("ISE".equals(student.department)) {
+                System.out.println(student.name + " - " + student.department);
+            }
+        }
+
+        // Print students belonging to 'C' section
+        System.out.println("\nStudents belonging to 'C' section:");
+        iterator = studentList.iterator();
+        while (iterator.hasNext()) {
+            Student student = iterator.next();
+            if ("C".equals(student.section)) {
+                System.out.println(student.name + " - " + student.section);
+            }
+        }
+    }
+}

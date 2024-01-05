@@ -1,0 +1,80 @@
+1. Create an array list of Students (with fields such as name, USN, Dept, section,
+CGPA). Search for the students with CGPA &gt;8.5. Print the student details
+belonging to ‘ISE’ department. Print students belonging to ‘C’ section. Use Iterator
+to iterate through the list.
+2. Write a Program that simulates a telephone that records missed incoming calls in
+lists. Maintain the phone callers list in hashmap . For each missed call ,
+telephone number of origin, and name of the caller if the name is available. For
+unlisted numbers, set the name to “private caller”. Missed calls have to be
+maintained in the order they arrive. User goes through the missed call list and can
+decide to delete the call or display the call details.
+Additional: Display all the phone numbers from the callers list whose name
+start from “A”.
+3. Write a Java program using user-defined storage classes to create a book database
+and store it into a List. Each entry in the list should include title, author, publisher and
+price of the book. Sort the books in ascending order of price and print them. Maintain
+the book details with respect to a unique book id. Prompt for an author name and list all
+the books with the same author’s name. Create a new list holding all the book details
+with price greater than a user specified price.
+Additional: Create a front-end using swings to accept book details
+4. Create a desktop java application using swings to enable a user to enter student
+information such as name, usn, age, address, sgpa of 4 semesters, category. Perform
+validations on age(>18 and <=30) and sgpa(range 0 to 10). Display appropriate
+messages in pop up boxes to indicate wrong entries, on clicking of the “compute”
+button. Also find the cgpa based on the obtained sgpa. On clicking of the “done”
+button, place the student details in a hashmap with unique student id as key and
+student information as value. A click on the “display” button should display the
+collection in a textarea in a separate frame.
+5. Write a java program to create a collection of customer details. Use swings to allow
+the user to enter the customer mobile number. If the person exists in the collection
+extract the customer id from the collection else add the customer details entered through
+the swing components. Once done, further allow the user to enter the item purchased by
+giving the item id and quantity purchased. On clicking of a button, the item name and
+the total cost should appear information Dialog box. Prompt for any discount and
+update the total cost.
+6. Write java program using swings to create a front end for entering employee
+data such as employee name, employee age, employee payscale(select from a list) ,
+number of family members, address, gender (male, female). On the click of the
+button, display a message dialog box holding employer data.
+If the age entered in greater than 22 and less than 60 , then only the data is valid. If
+invalid, pop up an input dialog box to prompt the user to enter age data in the
+range.
+7. Write Java program to create a front end using swings to. Accept login details
+such as login id , name and password. On the click of the submit button add this to
+a database.
+8. Write a program that uses Java Swing and JDBC to create a stand-alone application:
+Create two tables namely, Representative (RepNo, RepName, State, Comission, Rate)
+and Customer (CustNo, CustName, State, Credit_Limit, RepNo) in MySQL database.
+Use appropriate Swing components to insert values in a form.
+Display in frame those customers and representatives belonging to a particular
+state.
+9. Write a Java program using user-defined storage classes to create a book database and
+store it into a collection. Each entry in the list should include title, author, publisher and
+price of the book. Maintain the book details with respect to a unique book id. For a given
+a value by the user, find all the books that match either the whole or a part of the book
+title. Identify a publisher and print books from a particular publisher. Update the
+publisher details based on a title. For collections use hashmaps.
+10. Write a program that uses Java Swing and JDBC to create a stand-alone application:
+Create two tables namely, Patient and Medicine in MySQL database.
+Use appropriate Swing components to insert values in a form for patient and medicine.
+List the patient details taking a particular type of medicine and the type of
+treatment.
+11. Create a Servlet to accepts personal information, salary information and Tax
+deduction details from the user and write the information into a collection. On clicking
+‘submit’ button, copy the contents of the collection to the file.
+12. Create a jsp page that accepts patient information in a hospital such as patient id,
+patient name, and age, date of admission, cause of admission, doctor diagnosed, and
+treatment proposed. Using servlet ,place the details into a database. Allow options to
+insert, update, and view and delete the contents in the database.
+13. Write a JSP Program to do the following to buy a T-Shirt online:
+a) A set of checkboxes to select your T-Shirt accessories such as ‘belt’, ‘cap’,
+‘hair-band’ etc.
+b) A text area / text field to enter your T-Shirt tag-line.
+c) A Radio-button that allows the user to choose between T-Shirt with chest pocket
+and without. A Combo Box to choose your T-Shirt color,
+d) A Button called “Click Me”
+e) Insert the details entered into a table called ‘TShirts’.
+f) An OrderNo is generated by adding ‘1’ to the existing ‘OrderNo’. If ‘TShirts’
+table is empty, the initial value of ‘OrderNo’ is 100. This ‘OrderNo’ is also
+inserted into the ‘TShirts’ table
+g) Display all the records of the ‘TShirts’ table in tabular form.

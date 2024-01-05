@@ -1,0 +1,66 @@
+import java.util.*;
+
+class Telephone {
+    private Map<String, String> callersList;
+    private List<String> missedCalls;
+
+    public Telephone() {
+        this.callersList = new HashMap<>();
+        this.missedCalls = new ArrayList<>();
+    }
+
+    public void recordMissedCall(String phoneNumber, String callerName) {
+        callerName = (callerName != null && !callerName.isEmpty()) ? callerName : "Private Caller";
+        callersList.put(phoneNumber, callerName);
+        missedCalls.add(phoneNumber);
+    }
+
+    public void displayMissedCalls() {
+        System.out.println("Missed Calls:");
+        missedCalls.forEach(phoneNumber -> {
+            System.out.println("Phone Number: " + phoneNumber);
+            System.out.println("Caller Name: " + callersList.get(phoneNumber));
+            System.out.println("------------");
+        });
+    }
+
+    public void deleteMissedCall(int index) {
+        if (index >= 0 && index < missedCalls.size()) {
+            String phoneNumber = missedCalls.remove(index);
+            callersList.remove(phoneNumber);
+            System.out.println("Call at index " + index + " deleted.");
+        } else {
+            System.out.println("Invalid index. No call deleted.");
+        }
+    }
+
+    public void displayNamesStartingWithA() {
+        System.out.println("Phone Numbers with Names starting with 'A':");
+        callersList.forEach((phoneNumber, callerName) -> {
+            if (callerName.toUpperCase().startsWith("A")) {
+                System.out.println("Phone Number: " + phoneNumber + ", Caller Name: " + callerName);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        Telephone telephone = new Telephone();
+
+        // Simulate missed calls
+        telephone.recordMissedCall("1234567890", "Arjun");
+        telephone.recordMissedCall("9876543210", "Ananya");
+        telephone.recordMissedCall("1112223333", null);
+
+        // Display missed calls
+        telephone.displayMissedCalls();
+
+        // Delete a missed call
+        telephone.deleteMissedCall(1);
+
+        // Display missed calls after deletion
+        telephone.displayMissedCalls();
+
+        // Display phone numbers with names starting with 'A'
+        telephone.displayNamesStartingWithA();
+    }
+}
